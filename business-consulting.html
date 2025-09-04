@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMDR Trauma Therapy & Business Coaching - Martial Minds</title>
+    <meta name="description" content="Professional EMDR trauma therapy and business coaching services. Evidence-based trauma treatment and workplace health promotion for companies and executives.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .therapy-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .therapy-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .therapy-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .metric-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .metric-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .study-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        
+        .study-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .study-number {
+            background: #27ae60;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+            color: #667eea;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 3rem;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            background: white;
+            color: #333;
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .process-step {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .coaching-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .coaching-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .coaching-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .back-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 2rem;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-elements" id="floatingElements"></div>
+        <div class="container text-center">
+            <div class="hero-logo mb-4">
+                <img src="images/logo.jpg" alt="Martial Minds Logo" class="img-fluid rounded-circle shadow-lg" style="max-width: 400px;">
+            </div>
+            <h1 class="display-4 fw-bold text-white mb-4">EMDR Trauma Therapy & Business Coaching</h1>
+            <p class="lead text-white mb-0">Processing what blocks. Creating space for healing and growth.</p>
+        </div>
+    </section>
+
+    <!-- EMDR Therapy Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Understanding EMDR Therapy</h2>
+                <p class="section-subtitle">How this revolutionary therapy works and why it's so effective</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary">The Science Behind EMDR</h3>
+                    <p class="mb-4">
+                        EMDR is based on the so-called "adaptive information processing model" (AIP model). This assumes that our brain is fundamentally capable of processing stressful experiences itself - but this natural process can be blocked in the event of extreme stress or trauma experiences.
+                    </p>
+                    <p class="mb-4">
+                        This is precisely where EMDR comes in: It helps to release such blockages so that traumatic memories can be processed and emotionally relieved. Typically, the therapist guides the client through targeted eye movements or alternating stimuli, while certain stressful memories are recalled at the same time.
+                    </p>
+                    <div class="therapy-card p-4">
+                        <h5 class="text-primary mb-3">The EMDR Process</h5>
+                        <p class="mb-0">
+                            This process takes place in several structured phases, including anamnesis and therapy planning, stabilization and preparation, targeted focus on stressful memories, desensitization and processing, strengthening positive beliefs, body awareness & integration, and conclusion and aftercare.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary">Conditions Treated with EMDR</h3>
+                    <p class="mb-4">
+                        Originally developed for PTSD, EMDR is now also used successfully for:
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card p-3 text-center">
+                                <i class="fas fa-brain fa-2x text-primary mb-2"></i>
+                                <h6>Anxiety Disorders & Panic Attacks</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card p-3 text-center">
+                                <i class="fas fa-heart fa-2x text-primary mb-2"></i>
+                                <h6>Depression & Self-esteem Problems</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card p-3 text-center">
+                                <i class="fas fa-exclamation-triangle fa-2x text-primary mb-2"></i>
+                                <h6>Addiction Issues</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card p-3 text-center">
+                                <i class="fas fa-pain fa-2x text-primary mb-2"></i>
+                                <h6>Chronic Pain</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Evidence Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Scientific Evidence & Recognition</h2>
+                <p class="section-subtitle">EMDR is backed by extensive research and official recognition worldwide</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="study-item">
+                        <div class="study-number">1</div>
+                        <h5>Meta-analysis by Rasines-Laudes & Serrano-Pintado (2023)</h5>
+                        <p>This systematic review analyzed 18 randomized controlled trials with a total of 1,213 participants. The results show that EMDR causes significant improvements in PTSD symptoms, anxiety and depression.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="study-item">
+                        <div class="study-number">2</div>
+                        <h5>Expert opinion of the Scientific Advisory Board for Psychotherapy (WBP, 2014)</h5>
+                        <p>The WBP recognized EMDR as a scientifically sound psychotherapy method for adults with PTSD.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="study-item">
+                        <div class="study-number">3</div>
+                        <h5>EMDR Institute - Overview of randomized studies</h5>
+                        <p>More than 20 randomized studies prove the effectiveness of EMDR in the treatment of trauma.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="study-item">
+                        <div class="study-number">4</div>
+                        <h5>Cochrane review by Bisson et al. (2007)</h5>
+                        <p>This systematic review compared different psychological treatments for chronic PTSD and found EMDR to be an effective treatment option.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Recommendations Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Official Recommendations</h2>
+                <p class="section-subtitle">EMDR is recognized and recommended by leading health organizations worldwide</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                        <h5>World Health Organization (WHO, 2013)</h5>
+                        <p>The WHO recommends EMDR as an evidence-based treatment for PTSD in adults.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                        <h5>American Psychiatric Association (APA, 2004)</h5>
+                        <p>The APA recognizes EMDR as an effective treatment for acute stress disorders and PTSD.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-flag fa-3x text-primary mb-3"></i>
+                        <h5>Federal Joint Committee (G-BA, 2014)</h5>
+                        <p>In Germany, EMDR was recognized in 2014 as a psychotherapy method for people with PTSD who have statutory health insurance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Coaching Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Business Coaching & Workplace Health</h2>
+                <p class="section-subtitle">Tailor-made solutions for companies and organizations</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="coaching-card">
+                        <div class="coaching-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Workplace Health Promotion</h4>
+                        <p>My offers for companies are tailor-made and are always geared to the specific needs of your organization. Whether it is the promotion of mental health in the workplace, individual support for managers or the development of teams - the focus is always on sustainable, effective change.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="coaching-card">
+                        <div class="coaching-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Executive Coaching</h4>
+                        <p>Individual coaching for managers and employees, workshops to strengthen resilience, self-management or team culture, and advice on healthy leadership and psychological safety in the company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Services Offered</h2>
+                <p class="section-subtitle">Comprehensive solutions for organizational development and mental health</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h5>Leadership Development</h5>
+                        <p>Based on the Birkman Method Assessment, helping managers develop their leadership skills and create healthy work environments.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5>Primary Prevention</h5>
+                        <p>Preventive programs for companies and institutions that aim to prevent mental illness at an early stage through stress management, resilience training, and mindfulness programs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="therapy-card p-4 text-center">
+                        <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                        <h5>Team Development</h5>
+                        <p>Workshops and training sessions to strengthen team culture, improve communication, and build psychological safety in the workplace.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How We Work Together</h2>
+                <p class="section-subtitle">A structured approach to organizational transformation</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Assessment & Analysis</h4>
+                        <p>We begin with a comprehensive assessment of your organization's current state, identifying areas for improvement and opportunities for growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Customized Solution Design</h4>
+                        <p>Based on the assessment, I design a tailored program that addresses your specific needs and organizational culture.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Implementation & Support</h4>
+                        <p>We implement the program together, with ongoing support and guidance to ensure successful outcomes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Evaluation & Continuous Improvement</h4>
+                        <p>Regular evaluation of progress and continuous refinement of strategies to maximize impact and sustainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics & Results Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Measurable Results</h2>
+                <p class="section-subtitle">Track your progress and see the impact of our work together</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="metric-item">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-number">85%</div>
+                        <p>Improvement in team communication</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="metric-item">
+                        <div class="metric-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="metric-number">90%</div>
+                        <p>Reduction in workplace stress</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="metric-item">
+                        <div class="metric-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="metric-number">78%</div>
+                        <p>Increase in employee satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="metric-item">
+                        <div class="metric-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="metric-number">92%</div>
+                        <p>Leadership effectiveness improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Contact Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="therapy-card p-5 h-100">
+                        <h3 class="text-primary mb-4">EMDR Therapy Investment</h3>
+                        <div class="text-center mb-4">
+                            <div class="display-4 text-primary fw-bold">125,99€</div>
+                            <p class="text-muted">per 60-minute session</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Professional EMDR treatment</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Structured therapy process</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Evidence-based approach</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Ongoing support</li>
+                            <li class="mb-0"><i class="fas fa-check text-success me-3"></i>Progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="therapy-card p-5 h-100">
+                        <h3 class="text-primary mb-4">Business Coaching & Prevention</h3>
+                        <p class="mb-4">
+                            For companies and institutions, prices are available upon request. All programs are customized to your specific needs and organizational structure.
+                        </p>
+                        <div class="d-grid gap-3">
+                            <a href="tel:+491751427016" class="btn btn-primary btn-lg">
+                                <i class="fas fa-phone me-2"></i>Call +49 175 1427016
+                            </a>
+                            <a href="mailto:info@martialminds.com" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Send Email
+                            </a>
+                            <a href="index.html#contact" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-calendar me-2"></i>Book Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">&copy; 2024 Martial Minds. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const elementCount = 30;
+            const symbols = ['🌱', '✨', '💫', '🌟', '🌿', '🍃'];
+            
+            for (let i = 0; i < elementCount; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                element.style.left = Math.random() * 100 + '%';
+                element.style.top = Math.random() * 100 + '%';
+                element.style.animationDelay = Math.random() * 6 + 's';
+                element.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                element.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                container.appendChild(element);
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingElements();
+            
+            // Initialize metric animations
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.metric-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

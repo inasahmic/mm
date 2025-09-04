@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martial Minds - Practice for Psychotherapy</title>
+    <meta name="description" content="Martial Minds - Professional psychotherapy practice offering EMDR, Birkman testing, behavioral therapy, and personal development coaching. Online and on-site sessions available.">
+    <meta name="keywords" content="psychotherapy, EMDR, trauma therapy, Birkman test, behavioral therapy, personal development, coaching, martial minds">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#home">
+                <img src="images/logo.jpg" alt="Martial Minds Logo" class="me-2" style="height: 60px;">
+                Martial Minds
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-lang="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-lang="about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-briefcase me-1"></i>Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="birth-chart.html"><i class="fas fa-star me-2 text-warning"></i>Psychological Birthchart Reading</a></li>
+                            <li><a class="dropdown-item" href="business-consulting.html"><i class="fas fa-eye me-2 text-primary"></i>EMDR Trauma Therapy</a></li>
+                            <li><a class="dropdown-item" href="personal-development.html"><i class="fas fa-seedling me-2 text-success"></i>Personal Development</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#services"><i class="fas fa-list me-2 text-info"></i>All Services Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing" data-lang="pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-lang="contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('bs')">Bosanski</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content text-white">
+                        <div class="hero-logo mb-4">
+                            
+                        </div>
+                        <h2 class="h3 mb-4" data-lang="hero-subtitle">Practice for Psychotherapy (according to the Heilpraktikergesetz)</h2>
+                        <p class="lead mb-4" data-lang="hero-description">
+                            Martial Minds is more than just a practice name - it is a concept. The word "martial" originally comes from the field of martial arts - and symbolizes strength, courage, discipline and determination to actively face life's challenges. "Minds" refers to the depth, complexity and versatility of our minds. Together, Martial Minds embodies the powerful combination of inner strength and psychological growth - exactly where change begins.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-light btn-lg me-3" data-lang="learn-more">Learn More</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg" data-lang="get-started">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-image">
+                        <img src="images/logo.jpg" alt="Martial Minds Logo" class="img-fluid rounded-circle shadow-lg" style="max-width: 800px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary" data-lang="about-title">About Me</h2>
+                    <p class="lead text-muted" data-lang="about-subtitle">Your journey to mental strength and personal growth</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="h4 mb-4 text-primary">Azra Mujcinovic M.Sc.</h3>
+                        <h4 class="h5 mb-3">Alternative practitioner for psychotherapy</h4>
+                        <p class="mb-4" data-lang="about-description">
+                            My path into psychotherapeutic work began with a deep interest in human experience, social dynamics and emotional healing. This interest led me to a Master of Science in Social Psychology, where I learned how our thoughts, feelings and actions arise and can change in interaction with our social environment.
+                        </p>
+                        <p class="mb-4" data-lang="about-experience">
+                            Since 2016, I have been working in the psychosocial field, particularly in initial psychological counseling for people with a history of migration. This work in a non-profit environment has not only shaped me, but has also shown me how important a resource-oriented and culturally sensitive approach to mental health is.
+                        </p>
+                        <div class="qualifications mb-4">
+                            <h5 class="mb-3">I am a qualified:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Master of Science in Social Psychology</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Non-medical practitioner for psychotherapy</li>
+                                <li><i class="fas fa-check text-success me-2"></i>EMDR therapist (for trauma-oriented psychotherapy)</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Certified Birkman Coach</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Psychological Birthchart Reader (depth psychology & spiritually oriented)</li>
+                            </ul>
+                        </div>
+                        <p class="mb-4" data-lang="about-martial">
+                            In addition to my therapeutic work, another area has played a central role in my life for over two decades: Kuk Sool Won, a traditional Korean martial art that I have been practicing since 2001. I am a 3rd Dan (black belt) holder. Kuk Sool Won combines aspects of self-defense, meditation, movement and inner discipline. It is not only about physical strength, but also about the balance between mind and body, focus, resilience and mindfulness - values that have also deeply influenced my therapeutic approach.
+                        </p>
+                        <p class="mb-0" data-lang="about-approach">
+                            My approach is characterized by mindfulness, clarity, empathy and the deep conviction that change is possible - if we are willing to look, feel and grow. I look forward to accompanying you on your journey.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image text-center">
+                        <img src="images/IMG_2564.jpeg" alt="Azra Mujcinovic - Martial Arts" class="img-fluid rounded shadow-lg mb-4">
+                        <div class="martial-arts-info bg-light p-4 rounded">
+                            <h5 class="text-primary mb-3"><i class="fas fa-fist-raised me-2"></i>Martial Arts Philosophy</h5>
+                            <p class="mb-0" data-lang="martial-philosophy">
+                                The connection between martial arts and psychotherapy was the inspiration for the name of my practice: Martial Minds stands for the synthesis of inner strength, clarity and mental agility - for the ability to courageously engage with oneself and consciously grow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary" data-lang="services-title">Services & Methods</h2>
+                    <p class="lead text-muted" data-lang="services-subtitle">Professional support for your mental health and personal development</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-user-tie fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-birkman">Birkman Personality Test</h4>
+                                <p class="card-text" data-lang="service-birkman-desc">
+                                    A well-founded psychological test that reveals your behavioral patterns, needs, strengths and stressors. Ideal for professional reorientation, strengthening self-knowledge or as a basis for coaching and therapy.
+                                </p>
+                                <a href="birth-chart.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-eye fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-emdr">EMDR - Trauma Therapy</h4>
+                                <p class="card-text" data-lang="service-emdr-desc">
+                                    Eye Movement Desensitization and Reprocessing is a scientifically well-researched method for processing stressful or traumatic memories. Bilateral stimulation helps the brain release internal blockages.
+                                </p>
+                                <a href="business-consulting.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-brain fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-behavioral">Behavioral Therapy</h4>
+                                <p class="card-text" data-lang="service-behavioral-desc">
+                                    A structured approach to changing thoughts, feelings and actions. Helps to overcome anxiety disorders, depression, inner emptiness, exhaustion, negative self-image or debilitating habits.
+                                </p>
+                                <a href="personal-development.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-heart fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-couples">Couples Therapy</h4>
+                                <p class="card-text" data-lang="service-couples-desc">
+                                    Finding new paths together. I support couples with tools from emotion-focused therapy, non-violent communication and systemic methods. For more closeness, understanding and real change.
+                                </p>
+                                <a href="personal-development.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-star fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-birthchart">Psychological Birthchart Reading</h4>
+                                <p class="card-text" data-lang="service-birthchart-desc">
+                                    A depth psychology-based interpretation of your birth chart - with a focus on inner dynamics, emotional development and unconscious patterns. Not an astrology cliché, but a fascinating tool for self-knowledge.
+                                </p>
+                                <a href="birth-chart.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-building fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title mb-3" data-lang="service-business">Business Coaching</h4>
+                                <p class="card-text" data-lang="service-business-desc">
+                                    Tailor-made offers for companies including workplace health promotion, executive coaching, team development, and primary prevention programs to strengthen mental health and resilience.
+                                </p>
+                                <a href="business-consulting.html" class="btn btn-outline-primary" data-lang="learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Groups & Approach Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary" data-lang="target-groups-title">Target Groups & Approach</h3>
+                    <p class="mb-4" data-lang="target-groups-desc">
+                        I treat adults and young people aged 16 and over who want to consciously work on their personal development and mental health. I also support companies - especially managers and teams - as part of coaching, prevention and personal development to promote mental strength, self-reflection and sustainable leadership skills.
+                    </p>
+                    <div class="advantages-list">
+                        <h5 class="mb-3" data-lang="advantages-title">Advantages for you as a self-payer or privately insured person:</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-1">Flexible appointment allocation according to your needs</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-2">Intensive, individual support without long waiting times</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-3">Access to specialized, modern methods such as EMDR, Birkman test or psychological birthchart reading</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-4">Personal and confidential atmosphere with high quality standards</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-5">Combination of proven psychotherapeutic methods and modern, scientifically based methods</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-6">No application or approval procedures necessary: Treatment can begin immediately</span></li>
+                            <li><i class="fas fa-check text-success me-2"></i><span data-lang="advantage-7">Absolute discretion: no diagnoses or treatment data are passed on to third parties</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary" data-lang="therapy-approach-title">Therapy & Support - Online and On-site</h3>
+                    <p class="mb-4" data-lang="therapy-approach-desc">
+                        All services offered by my practice preferably take place online (remotely) - securely, flexibly and regardless of location. Initial consultations usually take place in person in order to create a basis of trust. If you would like therapy in person, this is also possible at any time.
+                    </p>
+                    <div class="therapy-methods bg-light p-4 rounded">
+                        <h5 class="mb-3" data-lang="methods-title">Methods and tools I use:</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i><span data-lang="method-1">Thought protocols to reflect on and restructure negative thought patterns</span></li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i><span data-lang="method-2">Exposure exercises to gradually confront stressful situations</span></li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i><span data-lang="method-3">Behavioral exercises that train new ways of acting</span></li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i><span data-lang="method-4">Mindfulness and relaxation techniques for more inner peace and self-awareness</span></li>
+                            <li><i class="fas fa-lightbulb text-warning me-2"></i><span data-lang="method-5">Resource work to strengthen your personal resilience</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary" data-lang="pricing-title">Pricing</h2>
+                    <p class="lead text-muted" data-lang="pricing-subtitle">Transparent pricing for professional mental health services</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <h4 class="card-title text-primary mb-3" data-lang="pricing-basic">Basic Services</h4>
+                                <div class="price mb-4">
+                                    <span class="display-6 fw-bold text-primary">125,99€</span>
+                                    <span class="text-muted" data-lang="per-session">/session</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-psychotherapy">Psychotherapy (60 min)</span></li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-emdr">EMDR trauma therapy (60 min)</span></li>
+                                </ul>
+                                <a href="#contact" class="btn btn-primary w-100" data-lang="get-started">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card featured">
+                        <div class="card border-primary shadow h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="featured-badge">
+                                    <span class="badge bg-primary" data-lang="most-popular">Most Popular</span>
+                                </div>
+                                <h4 class="card-title text-primary mb-3" data-lang="pricing-specialized">Specialized Services</h4>
+                                <div class="price mb-4">
+                                    <span class="display-6 fw-bold text-primary">199,99€</span>
+                                    <span class="text-muted" data-lang="per-service">/service</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-birthchart">Psychological Birthchart reading</span></li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-couples">Couples therapy (60 min)</span></li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-consultation">Initial consultation (135,99€)</span></li>
+                                </ul>
+                                <a href="#contact" class="btn btn-primary w-100" data-lang="get-started">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <h4 class="card-title text-primary mb-3" data-lang="pricing-premium">Premium Services</h4>
+                                <div class="price mb-4">
+                                    <span class="display-6 fw-bold text-primary">399,99€</span>
+                                    <span class="text-muted" data-lang="per-test">/test</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-birkman">Birkman Advance personality test</span></li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-business">Business coaching (prices on request)</span></li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-lang="pricing-prevention">Primary prevention programs</span></li>
+                                </ul>
+                                <a href="#contact" class="btn btn-primary w-100" data-lang="get-started">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <div class="pricing-note bg-white p-4 rounded shadow-sm">
+                        <p class="mb-0" data-lang="pricing-note">
+                            <strong>Note:</strong> All services are for self-payers or people whose private insurance covers the costs. The treatment is exclusively for self-payers or people whose private insurance covers the costs. For companies and institutions, prices are available upon request.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary" data-lang="references-title">References & Certifications</h2>
+                    <p class="lead text-muted" data-lang="references-subtitle">Professional affiliations and recognized expertise</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="reference-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="reference-logo mb-3">
+                                    <img src="images/IMG_2568.jpeg" alt="Fresh Minds Logo" class="img-fluid" style="max-width: 80px; border-radius: 10px;">
+                                </div>
+                                <h5 class="card-title" data-lang="reference-fresh-minds">Fresh Minds</h5>
+                                <p class="card-text" data-lang="reference-fresh-minds-desc">
+                                    Project collaboration partner - working together to bring innovative mental health solutions to the community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="reference-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="reference-logo mb-3">
+                                    <img src="images/2018_Logo_RGB.webp" alt="Birkman Logo" class="img-fluid" style="max-height: 80px;">
+                                </div>
+                                <h5 class="card-title" data-lang="reference-birkman">Official Birkman Consultant</h5>
+                                <p class="card-text" data-lang="reference-birkman-desc">
+                                    Certified Birkman Coach with official recognition, providing scientifically-based personality assessments and coaching.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary" data-lang="contact-title">Contact Me</h2>
+                    <p class="lead text-muted" data-lang="contact-subtitle">Ready to start your journey? Get in touch today.</p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h4 class="mb-4 text-primary" data-lang="contact-info-title">Get in Touch</h4>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-phone fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1" data-lang="phone">Phone</h6>
+                                    <p class="mb-0">+49 175 1427016</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-envelope fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1" data-lang="email">Email</h6>
+                                    <p class="mb-0">[Your email address]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1" data-lang="location">Location</h6>
+                                    <p class="mb-0" data-lang="location-desc">Online sessions available worldwide. In-person sessions available in Germany.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-clock fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1" data-lang="availability">Availability</h6>
+                                    <p class="mb-0" data-lang="availability-desc">Flexible scheduling. Initial consultations usually in-person, therapy sessions online or in-person.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="mb-4 text-primary" data-lang="contact-form-title">Send a Message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select" id="service" required>
+                                        <option value="" data-lang="select-service">Select a Service</option>
+                                        <option value="psychotherapy" data-lang="option-psychotherapy">Psychotherapy</option>
+                                        <option value="emdr" data-lang="option-emdr">EMDR Trauma Therapy</option>
+                                        <option value="birkman" data-lang="option-birkman">Birkman Personality Test</option>
+                                        <option value="behavioral" data-lang="option-behavioral">Behavioral Therapy</option>
+                                        <option value="couples" data-lang="option-couples">Couples Therapy</option>
+                                        <option value="birthchart" data-lang="option-birthchart">Psychological Birthchart Reading</option>
+                                        <option value="business" data-lang="option-business">Business Coaching</option>
+                                        <option value="other" data-lang="option-other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100" data-lang="send-message">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                        <img src="images/logo.jpg" alt="Martial Minds Logo" class="me-3 rounded-circle" style="height: 50px;">
+                        <p class="mb-0">&copy; 2024 Martial Minds. <span data-lang="all-rights">All rights reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="btn btn-primary scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

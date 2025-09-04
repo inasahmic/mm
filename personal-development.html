@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Development & Behavioral Therapy - Martial Minds</title>
+    <meta name="description" content="Professional personal development coaching and behavioral therapy services. Transform your mindset, overcome challenges, and achieve your goals with evidence-based approaches.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .growth-bg {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 50%, #16a085 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .growth-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaves" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M25,10 Q40,5 50,25 Q60,45 25,40 Q10,25 25,10" fill="white" opacity="0.1"/><path d="M75,60 Q90,55 100,75 Q110,95 75,90 Q60,75 75,60" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23leaves)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.6;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .growth-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .therapy-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        
+        .therapy-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .therapy-icon {
+            font-size: 3rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+        
+        .journey-step {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .journey-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .step-number {
+            background: white;
+            color: #27ae60;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 50%, #16a085 100%);
+            color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #27ae60;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+            color: #27ae60;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #27ae60;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 3rem;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            background: white;
+            color: #333;
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mindset-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid #f8f9fa;
+        }
+        
+        .mindset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: #27ae60;
+        }
+        
+        .mindset-icon {
+            font-size: 3rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+        
+        .transformation-story {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        
+        .transformation-story:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .story-author {
+            font-weight: 600;
+            color: #27ae60;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .back-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 2rem;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-elements" id="floatingElements"></div>
+        <div class="container text-center">
+            <div class="hero-logo mb-4">
+                <img src="images/logo.jpg" alt="Martial Minds Logo" class="img-fluid rounded-circle shadow-lg" style="max-width: 400px;">
+            </div>
+            <h1 class="display-4 fw-bold text-white mb-4">Personal Development & Behavioral Therapy</h1>
+            <p class="lead text-white mb-0">Recognize old patterns. Take new paths to growth and transformation.</p>
+        </div>
+    </section>
+
+    <!-- Behavioral Therapy Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Behavioral Therapy Approach</h2>
+                <p class="section-subtitle">Evidence-based methods for lasting change and personal growth</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary">What is Behavioral Therapy?</h3>
+                    <p class="mb-4">
+                        Behavioral therapy is one of the best-researched forms of therapy and offers clear, everyday tools to specifically address psychological stress. It focuses on changing patterns of thinking, feeling and acting that block or burden you in life.
+                    </p>
+                    <p class="mb-4">
+                        Together we look at which automatic thoughts and reactions have crept into your life, which inner beliefs influence your self-image and your relationships, and how you can develop healthier, empowering patterns step by step.
+                    </p>
+                    <div class="growth-card p-4">
+                        <h5 class="text-primary mb-3">The Martial Arts Connection</h5>
+                        <p class="mb-0">
+                            Just as martial arts require discipline, practice, and gradual improvement, behavioral therapy helps you develop new patterns through consistent practice and mindful awareness of your thoughts and behaviors.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary">Conditions We Address</h3>
+                    <p class="mb-4">
+                        Behavioral therapy is particularly helpful for:
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card text-center">
+                                <i class="fas fa-brain therapy-icon"></i>
+                                <h6>Anxiety Disorders & Inner Restlessness</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card text-center">
+                                <i class="fas fa-heart therapy-icon"></i>
+                                <h6>Depression & States of Exhaustion</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card text-center">
+                                <i class="fas fa-user therapy-icon"></i>
+                                <h6>Self-esteem Issues & Perfectionism</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="therapy-card text-center">
+                                <i class="fas fa-exclamation-triangle therapy-icon"></i>
+                                <h6>Consequences of Trauma & Stress</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods & Tools Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Methods and Tools</h2>
+                <p class="section-subtitle">Practical techniques for transformation and growth</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-lightbulb fa-3x text-success mb-3"></i>
+                        <h5>Thought Protocols</h5>
+                        <p>Reflect on and restructure negative thought patterns that limit your potential and create unnecessary stress.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-arrow-up fa-3x text-success mb-3"></i>
+                        <h5>Exposure Exercises</h5>
+                        <p>Gradually confront stressful situations in a safe environment to build confidence and reduce anxiety.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-running fa-3x text-success mb-3"></i>
+                        <h5>Behavioral Exercises</h5>
+                        <p>Train new ways of acting that align with your goals and create positive change in your life.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-om fa-3x text-success mb-3"></i>
+                        <h5>Mindfulness & Relaxation</h5>
+                        <p>Develop inner peace and self-awareness through proven techniques for stress reduction and mental clarity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-gem fa-3x text-success mb-3"></i>
+                        <h5>Resource Work</h5>
+                        <p>Strengthen your personal resilience by identifying and building upon your existing strengths and capabilities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="growth-card p-4 text-center">
+                        <i class="fas fa-balance-scale fa-3x text-success mb-3"></i>
+                        <h5>Holistic Integration</h5>
+                        <p>Combine classic behavioral therapy with modern, holistic elements for comprehensive personal transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couples Therapy Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Couples Therapy & Communication</h2>
+                <p class="section-subtitle">Finding new paths together through understanding and growth</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4 text-primary">Building Stronger Relationships</h3>
+                    <p class="mb-4">
+                        I support couples with tools from emotion-focused therapy, non-violent communication and systemic methods. For more closeness, understanding and real change - instead of recurring conflicts.
+                    </p>
+                    <p class="mb-4">
+                        Couples therapy helps you break free from negative patterns and develop healthier ways of relating to each other. It's about creating a foundation of trust, respect, and mutual understanding.
+                    </p>
+                    <div class="growth-card p-4">
+                        <h5 class="text-primary mb-3">What You'll Learn</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Effective communication techniques</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Conflict resolution strategies</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Emotional intimacy building</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Trust and vulnerability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="growth-card p-4">
+                        <h4 class="text-primary mb-3">The Martial Arts Approach to Relationships</h4>
+                        <p class="mb-3">
+                            Just as martial arts teach balance, respect, and discipline, healthy relationships require the same principles. We work together to find the balance between individual needs and partnership goals.
+                        </p>
+                        <p class="mb-0">
+                            Through structured exercises and guided conversations, you'll develop the skills to navigate challenges together and create a relationship that supports both partners' growth and happiness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Development Programs Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Personal Development Programs</h2>
+                <p class="section-subtitle">Transform your mindset and achieve your goals with structured programs</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5>Mindset Mastery</h5>
+                        <p>Develop a growth mindset that embraces challenges, learns from failures, and continuously improves. Transform limiting beliefs into empowering perspectives.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h5>Goal Achievement</h5>
+                        <p>Learn to set meaningful goals, create actionable plans, and develop the discipline and resilience needed to achieve them consistently.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5>Emotional Intelligence</h5>
+                        <p>Enhance your ability to understand and manage emotions, build stronger relationships, and navigate life's challenges with greater wisdom.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <h5>Mindfulness & Wellness</h5>
+                        <p>Develop practices for stress reduction, mental clarity, and overall well-being that support your personal and professional growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Resilience Building</h5>
+                        <p>Strengthen your ability to bounce back from setbacks, adapt to change, and maintain focus on your goals despite challenges.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="mindset-card">
+                        <div class="mindset-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5>Leadership Development</h5>
+                        <p>Build the skills and mindset needed to lead effectively, whether in your career, relationships, or personal life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Journey Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Your Growth Journey</h2>
+                <p class="section-subtitle">A structured path to personal transformation and success</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-step">
+                        <div class="step-number">1</div>
+                        <h4>Assessment & Awareness</h4>
+                        <p>We begin by understanding your current situation, identifying areas for growth, and creating awareness of patterns that may be holding you back.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-step">
+                        <div class="step-number">2</div>
+                        <h4>Goal Setting & Planning</h4>
+                        <p>Together we establish clear, meaningful goals and create a structured plan to achieve them, breaking down large objectives into manageable steps.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-step">
+                        <div class="step-number">3</div>
+                        <h4>Skill Development & Practice</h4>
+                        <p>You'll learn practical skills and techniques, then practice them consistently to build new habits and patterns that support your growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-step">
+                        <div class="step-number">4</div>
+                        <h4>Integration & Mastery</h4>
+                        <p>As you integrate new skills into your daily life, you'll develop mastery and confidence, creating lasting positive change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Stories Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Transformation Stories</h2>
+                <p class="section-subtitle">Real people, real change, real results</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="transformation-story">
+                        <div class="story-quote">
+                            "Through behavioral therapy, I learned to recognize my negative thought patterns and replace them with empowering beliefs. I now approach challenges with confidence instead of fear."
+                        </div>
+                        <div class="story-author">- Sarah M., Anxiety Recovery</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="transformation-story">
+                        <div class="story-quote">
+                            "Couples therapy helped us break free from destructive communication patterns. We now have the tools to resolve conflicts constructively and grow together."
+                        </div>
+                        <div class="story-author">- Michael & Lisa, Relationship Growth</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="transformation-story">
+                        <div class="story-quote">
+                            "The personal development program gave me the mindset and skills to achieve goals I never thought possible. I'm now living the life I always dreamed of."
+                        </div>
+                        <div class="story-author">- David K., Life Transformation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="growth-card p-5 h-100">
+                        <h3 class="text-primary mb-4">Individual Therapy Investment</h3>
+                        <div class="text-center mb-4">
+                            <div class="display-4 text-primary fw-bold">125,99€</div>
+                            <p class="text-muted">per 60-minute session</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Professional behavioral therapy</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Personalized treatment plan</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Evidence-based approaches</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Ongoing support</li>
+                            <li class="mb-0"><i class="fas fa-check text-success me-3"></i>Progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="growth-card p-5 h-100">
+                        <h3 class="text-primary mb-4">Couples Therapy Investment</h3>
+                        <div class="text-center mb-4">
+                            <div class="display-4 text-primary fw-bold">169,99€</div>
+                            <p class="text-muted">per 60-minute session</p>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Professional couples therapy</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Communication skills training</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Conflict resolution strategies</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Relationship growth tools</li>
+                            <li class="mb-0"><i class="fas fa-check text-success me-3"></i>Ongoing relationship support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="growth-card p-5">
+                        <h2 class="text-primary mb-4">Ready to Transform Your Life?</h2>
+                        <p class="lead mb-4">
+                            Take the first step toward personal growth and transformation. Contact me to schedule your therapy session or personal development consultation.
+                        </p>
+                        <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                            <a href="tel:+491751427016" class="btn btn-success btn-lg">
+                                <i class="fas fa-phone me-2"></i>Call +49 175 1427016
+                            </a>
+                            <a href="mailto:info@martialminds.com" class="btn btn-outline-success btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Send Email
+                            </a>
+                            <a href="index.html#contact" class="btn btn-outline-success btn-lg">
+                                <i class="fas fa-calendar me-2"></i>Book Online
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">&copy; 2024 Martial Minds. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const elementCount = 30;
+            const symbols = ['🌱', '✨', '💫', '🌟', '🌿', '🍃'];
+            
+            for (let i = 0; i < elementCount; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                element.style.left = Math.random() * 100 + '%';
+                element.style.top = Math.random() * 100 + '%';
+                element.style.animationDelay = Math.random() * 8 + 's';
+                element.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                element.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                container.appendChild(element);
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingElements();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
