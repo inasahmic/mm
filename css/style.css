@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
@@ -65,7 +65,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(26, 37, 47, 0.8)), url('images/IMG_2564.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     padding-top: 80px;
@@ -448,16 +451,14 @@ footer {
     }
 }
 
-/* Service Cards Animation */
+/* Service Cards - Simple hover effect */
 .service-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
 }
 
-.service-card.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
@@ -766,6 +767,36 @@ footer .social-links a {
     .btn-lg {
         padding: 0.75rem 2rem;
         font-size: 1rem;
+    }
+    
+    /* Mobile-specific optimizations */
+    .schwerpunkte-section {
+        text-align: center;
+    }
+    
+    .about-image .row {
+        margin: 0 -5px;
+    }
+    
+    .about-image .col-4 {
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+    
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand img {
+        height: 40px !important;
     }
 }
 
