@@ -464,20 +464,81 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-content h2 {
-        font-size: 1.25rem;
-    }
-    
-    .display-5 {
         font-size: 2rem;
     }
     
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content h4 {
+        font-size: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .display-5 {
+        font-size: 1.8rem;
+    }
+    
     .btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn-lg {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
+    }
+    
+    .hero-image img {
+        max-width: 250px;
+    }
+    
+    .about-image img {
+        max-width: 250px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand img {
+        height: 45px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .service-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    .service-card p {
+        font-size: 0.85rem;
+    }
+    
+    .pricing-list {
+        padding: 2rem;
+    }
+    
+    .pricing-item h5 {
+        font-size: 1rem;
+    }
+    
+    .pricing-item p {
+        font-size: 0.85rem;
     }
     
     .navbar-nav .nav-link {
@@ -495,20 +556,73 @@ footer {
 
 @media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .hero-content h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .hero-content h4 {
+        font-size: 1rem;
+    }
+    
+    .hero-content h5 {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .hero-content .lead {
+        font-size: 0.9rem;
     }
     
     .display-5 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     
     .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .btn-lg {
         padding: 0.5rem 1.25rem;
         font-size: 0.85rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-content {
+        padding: 1rem 0;
+    }
+    
+    .hero-image img {
+        max-width: 180px;
+        height: auto;
+    }
+    
+    .schwerpunkte-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .schwerpunkte-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .schwerpunkte-section p {
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
     
     .scroll-to-top {
@@ -516,6 +630,172 @@ footer {
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .about-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-content h4 {
+        font-size: 1rem;
+    }
+    
+    .about-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .service-card {
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h5 {
+        font-size: 1rem;
+    }
+    
+    .service-card p {
+        font-size: 0.8rem;
+    }
+    
+    .pricing-list {
+        padding: 1.5rem;
+    }
+    
+    .pricing-item h5 {
+        font-size: 0.9rem;
+    }
+    
+    .pricing-item p {
+        font-size: 0.8rem;
+    }
+    
+    .contact-item h6 {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 150px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .btn-lg {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .schwerpunkte-section h4 {
+        font-size: 0.9rem;
+    }
+    
+    .schwerpunkte-section p {
+        font-size: 0.75rem;
+    }
+    
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-brand img {
+        height: 35px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .about-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .about-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    .about-content p {
+        font-size: 0.8rem;
+    }
+    
+    .service-card h5 {
+        font-size: 0.9rem;
+    }
+    
+    .service-card p {
+        font-size: 0.75rem;
+    }
+    
+    .pricing-list {
+        padding: 1rem;
+    }
+    
+    .pricing-item h5 {
+        font-size: 0.85rem;
+    }
+    
+    .pricing-item p {
+        font-size: 0.75rem;
+    }
+    
+    .contact-item h6 {
+        font-size: 0.85rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.75rem;
     }
 }
 
